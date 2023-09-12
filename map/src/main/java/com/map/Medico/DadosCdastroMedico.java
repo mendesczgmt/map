@@ -1,5 +1,21 @@
 package com.map.Medico;
 
-public record DadosCdastroMedico(String nome, String email, String crm) {
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
+public record DadosCdastroMedico(
+    @NotBlank
+    String nome,
+    @NotBlank
+    @Email
+    String email,
+    @NotBlank
+    String crm
+    ) {
+
+   
 
 }
+
+
