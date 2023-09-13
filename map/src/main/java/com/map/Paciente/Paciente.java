@@ -19,14 +19,14 @@ public class Paciente {
     private String nome;
     private String telefone;
     private String CPF;
-    private String dataNasc;
+    private String data_nasc;
     private int idade;
 
     public Paciente(dadosCadastroPaciente dados) {
         this.nome = dados.nome();
         this.telefone = dados.telefone();
         this.CPF = dados.CPF();
-        this.dataNasc = dados.dataNasc();
+        this.data_nasc = dados.data_nasc();
         this.idade = dados.idade();
     }
 }
