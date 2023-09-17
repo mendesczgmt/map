@@ -6,6 +6,7 @@ create table Pacientes(
     cpf varchar(20) not null,
     data_nasc varchar(20) not null,
     idade INT not null,
+    ativo BOOLEAN,
 
     primary key(id)
   );

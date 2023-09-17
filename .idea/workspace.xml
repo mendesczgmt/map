@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34a5af42-1924-4e85-af77-136608aa167a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/map/src/main/java/com/map/Controller/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/map/src/main/java/com/map/Controller/PacienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/src/main/java/com/map/Paciente/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/map/src/main/java/com/map/Paciente/Paciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/src/main/java/com/map/Paciente/dadosCadastroPaciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/map/src/main/java/com/map/Paciente/dadosCadastroPaciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/src/main/resources/db/migration/V1__create_table_paciente.sql" beforeDir="false" afterPath="$PROJECT_DIR$/map/src/main/resources/db/migration/V1__create_table_paciente.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +28,25 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Paciente&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="map" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="map" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
