@@ -1,4 +1,4 @@
-package med.voll.api.Recepcionista;
+package java.com.map.Recepcionista;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

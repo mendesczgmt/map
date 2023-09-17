@@ -1,10 +1,12 @@
-package med.voll.api.medico;
+package java.com.map.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+
+import java.com.map.agenda.AgendaDto;
 
 
 public record DadosCadastroMedico(
@@ -16,9 +18,9 @@ public record DadosCadastroMedico(
         @NotBlank @Pattern(regexp = "\\d{4,6}")
         String crm,
         @NotNull
-        Especialidade especialidade) {
+        Especialidade especialidade,
+        @Valid
+        AgendaDto agenda) {
 
-        public DadosCadastroMedico(Medico medico){
-            this(medico.getNome(), medico.getCrm(), medico.getEmail(), medico.getEspecialidade());
-        }
+        
 }

@@ -1,10 +1,11 @@
-package med.voll.api.medico;
+package java.com.map.medico;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import java.com.map.agenda.Agenda;
 
 
 @Table(name = "medicos")
@@ -22,6 +23,8 @@ public class Medico {
     private String crm;
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
+    @Embedded
+    private Agenda agenda;
 
 
     public Medico(DadosCadastroMedico dados) {
@@ -29,6 +32,7 @@ public class Medico {
         this.email = dados.email();
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
+        this.agenda = new Agenda(dados.agenda());
 
 
 
