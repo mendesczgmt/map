@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 
 public record DadosCadastroConsulta(
+    Long id,
     @NotBlank
     String data,
     @NotBlank
@@ -21,6 +22,6 @@ public record DadosCadastroConsulta(
 
 ) {
     public DadosCadastroConsulta(Consulta consulta){
-        this(consulta.getData(), consulta.getHora(), consulta.getMedico(), consulta.getPaciente(), consulta.getRecepcionista());
+        this(consulta.getId(),consulta.getData(), consulta.getHora(), consulta.getMedico(), consulta.getPaciente(), consulta.getRecepcionista());
     }
 }

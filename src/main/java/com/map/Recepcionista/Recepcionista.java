@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "recepcionistas")
 @Entity(name = "Recepcionista")
 @Getter
-@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")

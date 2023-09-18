@@ -1,4 +1,16 @@
 package com.map.Paciente;
 
-public record dadosCadastroPaciente(String nome, String telefone, String CPF, String data_nasc, int idade) {
+import jakarta.validation.constraints.NotBlank;
+
+public record dadosCadastroPaciente(
+    @NotBlank
+    String nome, 
+    @NotBlank
+    String telefone,
+    @NotBlank
+    String CPF,
+    @NotBlank
+    String data_nasc,
+    @NotBlank
+    int idade) {
 }

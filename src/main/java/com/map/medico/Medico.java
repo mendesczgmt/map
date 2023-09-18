@@ -12,7 +12,6 @@ import com.map.agenda.Agenda;
 @Table(name = "medicos")
 @Entity(name = "Medico")
 @Getter
-@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")

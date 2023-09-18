@@ -1,7 +1,7 @@
 package com.map.Paciente;
 
-public record DadosListagemPaciente(String nome, String telefone, String cpf, boolean ativo ) {
+public record DadosListagemPaciente(Long id, String nome, String telefone, String cpf, boolean ativo ) {
     public DadosListagemPaciente(Paciente paciente) {
-        this(paciente.getNome(), paciente.getTelefone(), paciente.getCPF(), paciente.getAtivo());
+        this(paciente.getId(), paciente.getNome(), paciente.getTelefone(), paciente.getCPF(), paciente.getAtivo());
     }
 }

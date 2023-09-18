@@ -23,13 +23,10 @@ public class Consulta {
     private String data;
     private String hora;
     @ManyToOne
-    @Embedded
     private Medico medico;
     @ManyToOne
-    @Embedded
     private Paciente paciente;
     @ManyToOne
-    @Embedded
     private Recepcionista recepcionista;
     
     public Consulta(DadosCadastroConsulta dados) {
