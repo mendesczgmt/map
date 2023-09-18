@@ -1,4 +1,4 @@
-package com.map.Controller;
+package com.map.controller;
 
 import com.map.Paciente.*;
 import jakarta.transaction.Transactional;

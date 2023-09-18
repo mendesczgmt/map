@@ -1,6 +1,7 @@
 package com.map.medico;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,6 +12,7 @@ import com.map.agenda.Agenda;
 @Table(name = "medicos")
 @Entity(name = "Medico")
 @Getter
+@Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
