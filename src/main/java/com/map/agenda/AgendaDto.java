@@ -1,11 +1,13 @@
 package com.map.agenda;
 
-import jakarta.validation.constraints.NotBlank;
+import java.time.LocalTime;
+
+
+import jakarta.validation.constraints.NotNull;
 
 public record AgendaDto (
-    @NotBlank
-    String hora_inicio,
-    @NotBlank 
-    String hora_termino) {
-    
+    @NotNull
+    LocalTime hora_inicio,
+    @NotNull
+    LocalTime hora_termino) {
 }

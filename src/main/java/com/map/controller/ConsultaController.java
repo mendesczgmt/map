@@ -42,8 +42,14 @@ public class ConsultaController {
 
     @PostMapping
     @Transactional
-    public void cadastrarConsulta(@RequestBody @Valid DadosCadastroConsulta consulta){
-        repository.save(new Consulta(consulta));
+    public ResponseEntity<String> marcarConsulta(@RequestBody DadosCadastroConsulta consulta) {
+        // Verifica se o médico já possui uma consulta na mesma data e horário
+        if (consultaService.existeConsultaNoMesmoHorario(consulta.medico(), consulta.hora())) {
+            return ResponseEntity.badRequest().body("Já existe uma consulta marcada para esse horário.");
+        }
+        // Se todas as validações passarem, crie a consulta
+        consultaService.marcarConsulta(consulta);
+        return ResponseEntity.ok("Consulta marcada com sucesso.");
     }
 
      @GetMapping

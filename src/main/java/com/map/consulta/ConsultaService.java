@@ -2,6 +2,8 @@ package com.map.consulta;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -9,6 +11,11 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ReflectionUtils;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.map.medico.Medico;
+
+import jakarta.validation.Valid;
 
 
 @Service
@@ -18,6 +25,16 @@ public class ConsultaService {
 
     public ConsultaService(ConsultaRepository consultaRepository){
         this.consultaRepository = consultaRepository;
+    }
+
+    @Transactional
+    public void marcarConsulta(@RequestBody @Valid DadosCadastroConsulta consulta){
+        consultaRepository.save(new Consulta(consulta));
+    }
+
+    public boolean existeConsultaNoMesmoHorario(Medico medico, LocalTime hora) {
+        List<Consulta> consultasConflitantes = consultaRepository.findByMedicoAndHora(medico, hora);
+        return !consultasConflitantes.isEmpty();
     }
 
     //CONSULTAS

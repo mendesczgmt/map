@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import com.map.Paciente.Paciente;
 import com.map.Recepcionista.Recepcionista;
 import com.map.medico.Medico;
@@ -20,8 +24,8 @@ public class Consulta {
     
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String data;
-    private String hora;
+    private LocalDate data;
+    private LocalTime hora;
     @ManyToOne
     private Medico medico;
     @ManyToOne
